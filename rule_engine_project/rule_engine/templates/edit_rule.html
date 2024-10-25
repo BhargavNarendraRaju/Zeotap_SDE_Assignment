@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Edit Rule</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Rules</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <ul>
+                {% for rule in rules %}
+                    <li>
+                        {{ rule.query }}
+                        <button type="submit" name="rule_id" value="{{ rule.id }}">Delete</button>
+                    </li>
+                {% empty %}
+                    <li>No rules found.</li>
+                {% endfor %}
+            </ul>
+        </form>
+        <div class="links">
+            <a href="{% url 'home' %}" class="link-button">Go to Home Page</a>
+        </div>
+    </div>
+</body>
+</html>

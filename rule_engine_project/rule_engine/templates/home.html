@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>3-Tier Rule Engine</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-title">User Eligibility Check</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" required>
+            <label for="department">Department:</label>
+            <input type="text" name="department" id="department" required>
+            <label for="salary">Salary:</label>
+            <input type="number" name="salary" id="salary" required>
+            <label for="experience">Experience:</label>
+            <input type="number" name="experience" id="experience" required>
+            <button type="submit">Check Eligibility</button>
+        </form>
+        <div class="result">
+            {% if result %}
+                <h2>{{ result }}</h2>
+            {% endif %}
+        </div>
+        <div class="links">
+            <a href="{% url 'create_rule' %}" class="link-button">Create Rule</a>
+            <a href="{% url 'edit_rule' %}" class="link-button">Edit Rule</a>
+        </div>
+    </div>
+</body>
+</html>
