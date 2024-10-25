@@ -55,19 +55,21 @@ To set up the project locally, follow these steps:
    ```bash
    git clone https://github.com/BhargavNarendraRaju/Zeotap_SDE_Assignment.git
 
-2.Navigate into the project directory:
+2. Navigate into the project directory:
    ```bash
    cd Zeotap_SDE_Assignment
 
-3.Install required Packages:
+3. Install required Packages:
    ```bash
    pip install -r requirements.txt
+   
 4. Rule the application:
    ```bash
    python manage.py runserver
 
 Open a web browser and navigate to http://127.0.0.1:8000/.
-#Conclusion
+
+## Conclusion
 The Rule Engine Application provides a flexible way to define and evaluate eligibility rules, making it a valuable tool for various applications. With its user-friendly interface and powerful rule parsing capabilities, it allows users to easily manage and evaluate rules based on specific criteria.
 
 
