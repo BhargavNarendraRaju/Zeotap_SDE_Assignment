@@ -65,6 +65,7 @@ To set up the project locally, follow these steps:
 4. Rule the application:
    ```bash
    python manage.py runserver
+
 Open a web browser and navigate to http://127.0.0.1:8000/.
 #Conclusion
 The Rule Engine Application provides a flexible way to define and evaluate eligibility rules, making it a valuable tool for various applications. With its user-friendly interface and powerful rule parsing capabilities, it allows users to easily manage and evaluate rules based on specific criteria.
